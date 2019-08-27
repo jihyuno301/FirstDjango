@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--number라는 변수를 date 포맷화한것처럼 or(|)연산자를 쓰면
+    django에 embedded되어있는 필터메소드(divisibleby)를 사용할 수 있다. -->
+    <p>
+        {% if number|divisibleby:2 %}
+            짝수입니다.
+        {% else %}
+            홀수입니다.
+        {% endif %}
+    </p>
+    <p>
+        <a href="{% url 'result' %}"><button>결과보기</button></a>
+    </p>
+</body>
+</html>
