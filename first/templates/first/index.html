@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'first/base.html' %}
+{% load static %}
+{% block content %}
+
     <p>Hello World!</p>
+
+    <img style="width:100px;" src="{% static 'first/bom.jpg'%}" alt="bom"/>
     <p>{{ current_date }}</p>
     <p>{{ current_date|date:"Y년 m월 d일 H시 i분 s초" }}</p>
 
@@ -13,5 +12,5 @@
     <!-- 장고에서 선호하는 방법은 아님 <a href="/select/">시작하기</a> -->
     <!-- 유지보수에 장점이 있다 -->
     <a href="{% url 'select' %}">시작하기</a>
-</body>
-</html>
+
+{% endblock %}

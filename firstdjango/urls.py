@@ -20,7 +20,9 @@ from django.urls import path, include
 urlpatterns = [
     #도메인을 치고 들어오자마자 바로 보여지는 페이지는 index메소드의 응답값으로 하겠다
     #path('', views.index, name='index'),
-    path('', include('first.urls')),
+    #첫번째 인자값에 패스경로를 설정하면 url이 first/까지 가게 하기위함이다.
+    path('first/', include('first.urls')),
+    path('second/', include('second.urls')),
     path('admin/', admin.site.urls),
 
 ]
